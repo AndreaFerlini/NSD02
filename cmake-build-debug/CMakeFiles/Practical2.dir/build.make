@@ -57,41 +57,67 @@ include CMakeFiles/Practical2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Practical2.dir/flags.make
 
-CMakeFiles/Practical2.dir/main.cpp.o: CMakeFiles/Practical2.dir/flags.make
-CMakeFiles/Practical2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Practical2.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/main.cpp.o -c /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/main.cpp
+CMakeFiles/Practical2.dir/src/main.cpp.o: CMakeFiles/Practical2.dir/flags.make
+CMakeFiles/Practical2.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Practical2.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/main.cpp.o -c /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp
 
-CMakeFiles/Practical2.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Practical2.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/main.cpp > CMakeFiles/Practical2.dir/main.cpp.i
+CMakeFiles/Practical2.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Practical2.dir/src/main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp > CMakeFiles/Practical2.dir/src/main.cpp.i
 
-CMakeFiles/Practical2.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Practical2.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/main.cpp -o CMakeFiles/Practical2.dir/main.cpp.s
+CMakeFiles/Practical2.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Practical2.dir/src/main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp -o CMakeFiles/Practical2.dir/src/main.cpp.s
 
-CMakeFiles/Practical2.dir/main.cpp.o.requires:
+CMakeFiles/Practical2.dir/src/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/Practical2.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/Practical2.dir/src/main.cpp.o.requires
 
-CMakeFiles/Practical2.dir/main.cpp.o.provides: CMakeFiles/Practical2.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/Practical2.dir/main.cpp.o.provides
+CMakeFiles/Practical2.dir/src/main.cpp.o.provides: CMakeFiles/Practical2.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/Practical2.dir/src/main.cpp.o.provides
 
-CMakeFiles/Practical2.dir/main.cpp.o.provides.build: CMakeFiles/Practical2.dir/main.cpp.o
+CMakeFiles/Practical2.dir/src/main.cpp.o.provides.build: CMakeFiles/Practical2.dir/src/main.cpp.o
+
+
+CMakeFiles/Practical2.dir/src/loadgrap.cpp.o: CMakeFiles/Practical2.dir/flags.make
+CMakeFiles/Practical2.dir/src/loadgrap.cpp.o: ../src/loadgrap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Practical2.dir/src/loadgrap.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/loadgrap.cpp.o -c /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.cpp
+
+CMakeFiles/Practical2.dir/src/loadgrap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Practical2.dir/src/loadgrap.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.cpp > CMakeFiles/Practical2.dir/src/loadgrap.cpp.i
+
+CMakeFiles/Practical2.dir/src/loadgrap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Practical2.dir/src/loadgrap.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.cpp -o CMakeFiles/Practical2.dir/src/loadgrap.cpp.s
+
+CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.requires:
+
+.PHONY : CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.requires
+
+CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.provides: CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.provides.build
+.PHONY : CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.provides
+
+CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.provides.build: CMakeFiles/Practical2.dir/src/loadgrap.cpp.o
 
 
 # Object files for target Practical2
 Practical2_OBJECTS = \
-"CMakeFiles/Practical2.dir/main.cpp.o"
+"CMakeFiles/Practical2.dir/src/main.cpp.o" \
+"CMakeFiles/Practical2.dir/src/loadgrap.cpp.o"
 
 # External object files for target Practical2
 Practical2_EXTERNAL_OBJECTS =
 
-Practical2: CMakeFiles/Practical2.dir/main.cpp.o
+Practical2: CMakeFiles/Practical2.dir/src/main.cpp.o
+Practical2: CMakeFiles/Practical2.dir/src/loadgrap.cpp.o
 Practical2: CMakeFiles/Practical2.dir/build.make
 Practical2: CMakeFiles/Practical2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Practical2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Practical2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Practical2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +125,8 @@ CMakeFiles/Practical2.dir/build: Practical2
 
 .PHONY : CMakeFiles/Practical2.dir/build
 
-CMakeFiles/Practical2.dir/requires: CMakeFiles/Practical2.dir/main.cpp.o.requires
+CMakeFiles/Practical2.dir/requires: CMakeFiles/Practical2.dir/src/main.cpp.o.requires
+CMakeFiles/Practical2.dir/requires: CMakeFiles/Practical2.dir/src/loadgrap.cpp.o.requires
 
 .PHONY : CMakeFiles/Practical2.dir/requires
 

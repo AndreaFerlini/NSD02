@@ -82,7 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/main.cpp">
+		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.cpp">
+			<Option target="Practical2"/>
+		</Unit>
+		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.h">
+			<Option target="Practical2"/>
+		</Unit>
+		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp">
 			<Option target="Practical2"/>
 		</Unit>
 		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/CMakeLists.txt">

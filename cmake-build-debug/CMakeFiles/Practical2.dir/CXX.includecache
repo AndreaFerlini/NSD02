@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.cpp
+loadgrap.h
+/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.h
+
+/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.h
+iostream
+-
+fstream
+-
+ctime
+-
+
+/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp
+iostream
+-
+loadgrap.h
+/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.h
+

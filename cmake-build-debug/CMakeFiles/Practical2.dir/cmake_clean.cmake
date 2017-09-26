@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Practical2.dir/main.cpp.o"
+  "CMakeFiles/Practical2.dir/src/main.cpp.o"
+  "CMakeFiles/Practical2.dir/src/loadgrap.cpp.o"
   "Practical2.pdb"
   "Practical2"
 )
