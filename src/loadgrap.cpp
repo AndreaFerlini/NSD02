@@ -94,27 +94,27 @@ int computeDegree(string filename, GraphDegree &nodesDegree, bool debug){
     return 0;
 }
 
-/// TODO Modify nodesDegree use the one embedded in the AdjList
+// Loading the adjacency list & store it in memory
 int loadAdjListContiguous(string filename, AdjacencyList& myList, bool debug){
     fstream graph;
     unsigned int cursor = 0;
 
     // Compute the degree of the graph
     computeDegree(filename, myList.adjNodesDegree, debug);
-    myList.size_list_beginning = myList.adjNodesDegree.graph_size;
+    myList.vertices = myList.adjNodesDegree.graph_size;
 
     // Sum the degree of every node
-    for (unsigned int i=0; i < myList.size_list_beginning; i++){
+    for (unsigned int i=0; i < myList.vertices; i++){
         myList.size_neighbour_list += myList.adjNodesDegree.degree_array[i];
     }
 
     myList.neighbours_list = new unsigned int[myList.size_neighbour_list];   // List of neighbours in a compact way
 
     // Contains the index of the neighbours_list where the list of neighbours (of the i node) starts
-    myList.list_beginning = new unsigned int[myList.size_list_beginning]();
+    myList.list_beginning = new unsigned int[myList.vertices]();
 
     // Initialize list_beginning to point at the beginning of their list
-    for (unsigned int node_idx=0; node_idx < myList.size_list_beginning; node_idx++){
+    for (unsigned int node_idx=0; node_idx < myList.vertices; node_idx++){
         myList.list_beginning[node_idx] = cursor;
         cursor += myList.adjNodesDegree.degree_array[node_idx];
     }
@@ -143,7 +143,7 @@ int loadAdjListContiguous(string filename, AdjacencyList& myList, bool debug){
         }
 
         // Reset beginning position (going backwards of a nr of steps equal to the degree of the node)
-        for (unsigned int node_idx=0; node_idx < myList.size_list_beginning; node_idx++){
+        for (unsigned int node_idx=0; node_idx < myList.vertices; node_idx++){
             myList.list_beginning[node_idx] -= myList.adjNodesDegree.degree_array[node_idx];
         }
 
@@ -153,7 +153,7 @@ int loadAdjListContiguous(string filename, AdjacencyList& myList, bool debug){
         if (debug) {
             cout << "  Node\t\tNeighbours" << endl;
             cout << "  ----------------------------" << endl;
-            for (unsigned int node = 0; node < myList.size_list_beginning; node++) {
+            for (unsigned int node = 0; node < myList.vertices; node++) {
                 cout << node + 1 << " -> ";
                 for (unsigned int neigh_index = 0; neigh_index < myList.adjNodesDegree.degree_array[node]; neigh_index++) {
                     cout << myList.neighbours_list[myList.list_beginning[node]+neigh_index] << " ";
@@ -166,5 +166,65 @@ int loadAdjListContiguous(string filename, AdjacencyList& myList, bool debug){
         cout << "[Compact Adjacency List] Error! Unable to open the file " << filename << endl;
         return -1;
     }
+    return 0;
+}
+
+// BFS from a given source
+int BFS(unsigned int source, AdjacencyList &myList, bool debug){
+
+    list <unsigned int> fifo;
+    //list <unsigned int>::iterator itr;
+    unsigned int it=0;
+    unsigned int output_node=0;
+    unsigned int target_neighbour=0;
+
+    // Mark all the nodes as not visited
+    bool *visited = new bool [myList.vertices]();
+
+    if (debug){
+        for (unsigned int i=0; i < myList.vertices; i++){
+            cout << visited[i] << endl;
+            // visited[i] = false;
+        }
+    }
+
+    // Mark the source as visited and push it @ the end of the fifo
+    visited[source-1] = true;
+    fifo.push_back(source-1);
+
+    if (debug){
+        cout << "[BFS Tree] - parsing the fifo ..." << "size of the fifo " << fifo.size() << endl;
+    }
+    cout << endl << "Printing the BFS starting from " << source << endl;
+    while (!fifo.empty()){
+
+        output_node = fifo.front();
+
+        fifo.pop_front();
+
+//        cout << "BFS";
+        cout << output_node+1 << " ";
+
+        if (debug)
+            cout << endl << "[BFS Tree] - iterating " << output_node+1 << "'s neighbours ..." << endl;
+
+
+        for (it = myList.list_beginning[output_node]; it < (myList.list_beginning[output_node] + myList.adjNodesDegree.degree_array[output_node]); it++) {
+
+            target_neighbour = myList.neighbours_list[it];
+
+            if (!visited[target_neighbour-1]) {
+                if (debug)
+                    cout << "[BFS Tree creation] - neighbour #" << it << ": " << target_neighbour << endl;
+
+                fifo.push_back(target_neighbour - 1);
+                visited[target_neighbour - 1] = true;
+            }
+        }
+
+        cout << endl;
+
+    }
+    delete [] visited;
     return 0;
 }

@@ -6,6 +6,7 @@ int main() {
     string filename;
     bool debug = false;
     AdjacencyList loadedGraph;
+    unsigned int bfs_source = 5;
 
     filename = "../graphs/sample.graph";
 
@@ -13,6 +14,12 @@ int main() {
         return -1;
 
     loadedGraph.print(debug);
+
+    if (bfs_source <= loadedGraph.vertices){
+        BFS(bfs_source, loadedGraph, debug);
+    } else {
+        cout << "[ERROR] - wrong source";
+    }
 
     return 0;
 }

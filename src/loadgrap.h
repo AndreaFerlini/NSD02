@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <ctime>
+#include <list>
 
 using namespace std;
 
@@ -58,7 +59,8 @@ struct AdjacencyList{
     unsigned int* neighbours_list;
     unsigned int* list_beginning;
     unsigned int size_neighbour_list;
-    unsigned int size_list_beginning;
+    unsigned int vertices;
+
     GraphDegree adjNodesDegree;
 
 
@@ -67,13 +69,13 @@ struct AdjacencyList{
         neighbours_list = nullptr;
         list_beginning = nullptr;
         size_neighbour_list = 0;
-        size_list_beginning = 0;
+        vertices = 0;
     }
 
     /// CONSTRUCTOR
     AdjacencyList(unsigned int sum_degree, unsigned int num_nodes){
         size_neighbour_list = sum_degree;
-        size_list_beginning = num_nodes;
+        vertices = num_nodes;
         neighbours_list = new unsigned int [sum_degree]();
         list_beginning = new unsigned int [num_nodes]();
 
@@ -82,16 +84,16 @@ struct AdjacencyList{
     /// COPY CONSTRUCTOR
     /// To allow -> a = b with NodeDegree a,b;
     AdjacencyList(const AdjacencyList &obj){
-        size_list_beginning = obj.size_list_beginning;
+        vertices = obj.vertices;
         size_neighbour_list= obj.size_neighbour_list;
         neighbours_list = new unsigned int[size_neighbour_list]; // with () it's initialized with all 0s
-        list_beginning = new unsigned int[size_list_beginning]; // with () it's initialized with all 0s
+        list_beginning = new unsigned int[vertices]; // with () it's initialized with all 0s
 
         for (unsigned int i=0; i < size_neighbour_list; i++){
             neighbours_list[i] = obj.neighbours_list[i];
         }
 
-        for (unsigned int i=0; i < size_list_beginning; i++) {
+        for (unsigned int i=0; i < vertices; i++) {
             list_beginning[i] = obj.list_beginning[i];
         }
     }
@@ -115,19 +117,19 @@ struct AdjacencyList{
 
         cout << "  Node\t\tNeighbours" << endl;
         cout << "  ----------------------------" << endl;
-        for (unsigned int node = 0; node < size_list_beginning; node++) {
+        for (unsigned int node = 0; node < vertices; node++) {
             cout << node + 1 << " -> ";
             for (unsigned int neigh_index = 0; neigh_index < adjNodesDegree.degree_array[node]; neigh_index++) {
                 cout << neighbours_list[list_beginning[node] + neigh_index] << " ";
             }
-            cout << endl;
+            cout << endl << endl ;
         }
     }
 };
 /// FUNCTIONS
 
-int loadAdjListContiguous (string filename, AdjacencyList& myList, bool debug="false");
-int graphDegree (string filename, GraphDegree& nodeArray, bool debug="false");
-int createBFS ();
+int loadAdjListContiguous (string filename, AdjacencyList& myList, bool debug=false);
+int graphDegree (string filename, GraphDegree& nodeArray, bool debug=false);
+int BFS(unsigned int source, AdjacencyList &myList, bool debug=false);
 
 #endif //PRACTICAL2_LOADGRAP_H
