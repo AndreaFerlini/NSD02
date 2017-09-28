@@ -82,10 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.cpp">
+		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/bfs.cpp">
 			<Option target="Practical2"/>
 		</Unit>
-		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgrap.h">
+		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/bfs.h">
+			<Option target="Practical2"/>
+		</Unit>
+		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgraph.cpp">
+			<Option target="Practical2"/>
+		</Unit>
+		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgraph.h">
 			<Option target="Practical2"/>
 		</Unit>
 		<Unit filename="/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp">

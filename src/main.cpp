@@ -1,5 +1,6 @@
 #include <iostream>
-#include "loadgrap.h"
+#include "loadgraph.h"
+#include "bfs.h"
 
 int main() {
 
@@ -15,8 +16,8 @@ int main() {
 
     loadedGraph.print(debug);
 
-    if (bfs_source <= loadedGraph.vertices){
-        BFS(bfs_source, loadedGraph, debug);
+    if (bfs_source <= loadedGraph.num_vertices){
+        printBFS(bfs_source, loadedGraph, debug);
     } else {
         cout << "[ERROR] - wrong source";
     }

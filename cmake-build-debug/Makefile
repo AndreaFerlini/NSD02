@@ -123,32 +123,59 @@ Practical2/fast:
 	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/build
 .PHONY : Practical2/fast
 
-src/loadgrap.o: src/loadgrap.cpp.o
+src/bfs.o: src/bfs.cpp.o
 
-.PHONY : src/loadgrap.o
+.PHONY : src/bfs.o
 
 # target to build an object file
-src/loadgrap.cpp.o:
-	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/loadgrap.cpp.o
-.PHONY : src/loadgrap.cpp.o
+src/bfs.cpp.o:
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/bfs.cpp.o
+.PHONY : src/bfs.cpp.o
 
-src/loadgrap.i: src/loadgrap.cpp.i
+src/bfs.i: src/bfs.cpp.i
 
-.PHONY : src/loadgrap.i
+.PHONY : src/bfs.i
 
 # target to preprocess a source file
-src/loadgrap.cpp.i:
-	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/loadgrap.cpp.i
-.PHONY : src/loadgrap.cpp.i
+src/bfs.cpp.i:
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/bfs.cpp.i
+.PHONY : src/bfs.cpp.i
 
-src/loadgrap.s: src/loadgrap.cpp.s
+src/bfs.s: src/bfs.cpp.s
 
-.PHONY : src/loadgrap.s
+.PHONY : src/bfs.s
 
 # target to generate assembly for a file
-src/loadgrap.cpp.s:
-	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/loadgrap.cpp.s
-.PHONY : src/loadgrap.cpp.s
+src/bfs.cpp.s:
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/bfs.cpp.s
+.PHONY : src/bfs.cpp.s
+
+src/loadgraph.o: src/loadgraph.cpp.o
+
+.PHONY : src/loadgraph.o
+
+# target to build an object file
+src/loadgraph.cpp.o:
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/loadgraph.cpp.o
+.PHONY : src/loadgraph.cpp.o
+
+src/loadgraph.i: src/loadgraph.cpp.i
+
+.PHONY : src/loadgraph.i
+
+# target to preprocess a source file
+src/loadgraph.cpp.i:
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/loadgraph.cpp.i
+.PHONY : src/loadgraph.cpp.i
+
+src/loadgraph.s: src/loadgraph.cpp.s
+
+.PHONY : src/loadgraph.s
+
+# target to generate assembly for a file
+src/loadgraph.cpp.s:
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/loadgraph.cpp.s
+.PHONY : src/loadgraph.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -186,9 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Practical2"
-	@echo "... src/loadgrap.o"
-	@echo "... src/loadgrap.i"
-	@echo "... src/loadgrap.s"
+	@echo "... src/bfs.o"
+	@echo "... src/bfs.i"
+	@echo "... src/bfs.s"
+	@echo "... src/loadgraph.o"
+	@echo "... src/loadgraph.i"
+	@echo "... src/loadgraph.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

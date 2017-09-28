@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Practical2.dir/src/main.cpp.o CMakeFiles/Practical2.dir/src/loadgrap.cpp.o  -o Practical2 
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Practical2.dir/src/main.cpp.o CMakeFiles/Practical2.dir/src/loadgraph.cpp.o CMakeFiles/Practical2.dir/src/bfs.cpp.o  -o Practical2 
