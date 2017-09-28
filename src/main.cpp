@@ -10,6 +10,10 @@ int main() {
 
     filename = "../graphs/sample.graph";
 
+    ifstream file(filename);
+    if (!file.good())
+        cout << "No such file... " << endl;
+
     if (loadAdjListContiguous(filename, loadedGraph, debug))
         return -1;
 
