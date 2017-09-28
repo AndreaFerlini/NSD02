@@ -1,5 +1,4 @@
 #include <iostream>
-#include "loadgraph.h"
 #include "bfs.h"
 
 int main() {
