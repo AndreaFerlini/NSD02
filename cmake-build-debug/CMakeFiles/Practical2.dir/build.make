@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
+CMAKE_COMMAND = /opt/JetBrains/clion-2017.2.2/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
+RM = /opt/JetBrains/clion-2017.2.2/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2
+CMAKE_SOURCE_DIR = /home/luca/Data/source/repo/NSD02
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/luca/Data/source/repo/NSD02/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Practical2.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Practical2.dir/flags.make
 
 CMakeFiles/Practical2.dir/src/main.cpp.o: CMakeFiles/Practical2.dir/flags.make
 CMakeFiles/Practical2.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Practical2.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/main.cpp.o -c /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Practical2.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/main.cpp.o -c /home/luca/Data/source/repo/NSD02/src/main.cpp
 
 CMakeFiles/Practical2.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Practical2.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp > CMakeFiles/Practical2.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Data/source/repo/NSD02/src/main.cpp > CMakeFiles/Practical2.dir/src/main.cpp.i
 
 CMakeFiles/Practical2.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Practical2.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp -o CMakeFiles/Practical2.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Data/source/repo/NSD02/src/main.cpp -o CMakeFiles/Practical2.dir/src/main.cpp.s
 
 CMakeFiles/Practical2.dir/src/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Practical2.dir/src/main.cpp.o.provides.build: CMakeFiles/Practical2.d
 
 CMakeFiles/Practical2.dir/src/loadgraph.cpp.o: CMakeFiles/Practical2.dir/flags.make
 CMakeFiles/Practical2.dir/src/loadgraph.cpp.o: ../src/loadgraph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Practical2.dir/src/loadgraph.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/loadgraph.cpp.o -c /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Practical2.dir/src/loadgraph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/loadgraph.cpp.o -c /home/luca/Data/source/repo/NSD02/src/loadgraph.cpp
 
 CMakeFiles/Practical2.dir/src/loadgraph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Practical2.dir/src/loadgraph.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgraph.cpp > CMakeFiles/Practical2.dir/src/loadgraph.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Data/source/repo/NSD02/src/loadgraph.cpp > CMakeFiles/Practical2.dir/src/loadgraph.cpp.i
 
 CMakeFiles/Practical2.dir/src/loadgraph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Practical2.dir/src/loadgraph.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgraph.cpp -o CMakeFiles/Practical2.dir/src/loadgraph.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Data/source/repo/NSD02/src/loadgraph.cpp -o CMakeFiles/Practical2.dir/src/loadgraph.cpp.s
 
 CMakeFiles/Practical2.dir/src/loadgraph.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/Practical2.dir/src/loadgraph.cpp.o.provides.build: CMakeFiles/Practic
 
 CMakeFiles/Practical2.dir/src/bfs.cpp.o: CMakeFiles/Practical2.dir/flags.make
 CMakeFiles/Practical2.dir/src/bfs.cpp.o: ../src/bfs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Practical2.dir/src/bfs.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/bfs.cpp.o -c /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/bfs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Practical2.dir/src/bfs.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/bfs.cpp.o -c /home/luca/Data/source/repo/NSD02/src/bfs.cpp
 
 CMakeFiles/Practical2.dir/src/bfs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Practical2.dir/src/bfs.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/bfs.cpp > CMakeFiles/Practical2.dir/src/bfs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Data/source/repo/NSD02/src/bfs.cpp > CMakeFiles/Practical2.dir/src/bfs.cpp.i
 
 CMakeFiles/Practical2.dir/src/bfs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Practical2.dir/src/bfs.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/bfs.cpp -o CMakeFiles/Practical2.dir/src/bfs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Data/source/repo/NSD02/src/bfs.cpp -o CMakeFiles/Practical2.dir/src/bfs.cpp.s
 
 CMakeFiles/Practical2.dir/src/bfs.cpp.o.requires:
 
@@ -129,11 +129,36 @@ CMakeFiles/Practical2.dir/src/bfs.cpp.o.provides: CMakeFiles/Practical2.dir/src/
 CMakeFiles/Practical2.dir/src/bfs.cpp.o.provides.build: CMakeFiles/Practical2.dir/src/bfs.cpp.o
 
 
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o: CMakeFiles/Practical2.dir/flags.make
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o: ../src/dijkstra.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Practical2.dir/src/dijkstra.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Practical2.dir/src/dijkstra.cpp.o -c /home/luca/Data/source/repo/NSD02/src/dijkstra.cpp
+
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Practical2.dir/src/dijkstra.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luca/Data/source/repo/NSD02/src/dijkstra.cpp > CMakeFiles/Practical2.dir/src/dijkstra.cpp.i
+
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Practical2.dir/src/dijkstra.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luca/Data/source/repo/NSD02/src/dijkstra.cpp -o CMakeFiles/Practical2.dir/src/dijkstra.cpp.s
+
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.requires:
+
+.PHONY : CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.requires
+
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.provides: CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Practical2.dir/build.make CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.provides.build
+.PHONY : CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.provides
+
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.provides.build: CMakeFiles/Practical2.dir/src/dijkstra.cpp.o
+
+
 # Object files for target Practical2
 Practical2_OBJECTS = \
 "CMakeFiles/Practical2.dir/src/main.cpp.o" \
 "CMakeFiles/Practical2.dir/src/loadgraph.cpp.o" \
-"CMakeFiles/Practical2.dir/src/bfs.cpp.o"
+"CMakeFiles/Practical2.dir/src/bfs.cpp.o" \
+"CMakeFiles/Practical2.dir/src/dijkstra.cpp.o"
 
 # External object files for target Practical2
 Practical2_EXTERNAL_OBJECTS =
@@ -141,9 +166,10 @@ Practical2_EXTERNAL_OBJECTS =
 Practical2: CMakeFiles/Practical2.dir/src/main.cpp.o
 Practical2: CMakeFiles/Practical2.dir/src/loadgraph.cpp.o
 Practical2: CMakeFiles/Practical2.dir/src/bfs.cpp.o
+Practical2: CMakeFiles/Practical2.dir/src/dijkstra.cpp.o
 Practical2: CMakeFiles/Practical2.dir/build.make
 Practical2: CMakeFiles/Practical2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Practical2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Practical2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Practical2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +180,7 @@ CMakeFiles/Practical2.dir/build: Practical2
 CMakeFiles/Practical2.dir/requires: CMakeFiles/Practical2.dir/src/main.cpp.o.requires
 CMakeFiles/Practical2.dir/requires: CMakeFiles/Practical2.dir/src/loadgraph.cpp.o.requires
 CMakeFiles/Practical2.dir/requires: CMakeFiles/Practical2.dir/src/bfs.cpp.o.requires
+CMakeFiles/Practical2.dir/requires: CMakeFiles/Practical2.dir/src/dijkstra.cpp.o.requires
 
 .PHONY : CMakeFiles/Practical2.dir/requires
 
@@ -162,6 +189,6 @@ CMakeFiles/Practical2.dir/clean:
 .PHONY : CMakeFiles/Practical2.dir/clean
 
 CMakeFiles/Practical2.dir/depend:
-	cd /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2 /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2 /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug /Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles/Practical2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luca/Data/source/repo/NSD02/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luca/Data/source/repo/NSD02 /home/luca/Data/source/repo/NSD02 /home/luca/Data/source/repo/NSD02/cmake-build-debug /home/luca/Data/source/repo/NSD02/cmake-build-debug /home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles/Practical2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Practical2.dir/depend
 

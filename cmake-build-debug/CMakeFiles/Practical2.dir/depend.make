@@ -5,10 +5,15 @@ CMakeFiles/Practical2.dir/src/bfs.cpp.o: ../src/bfs.cpp
 CMakeFiles/Practical2.dir/src/bfs.cpp.o: ../src/bfs.h
 CMakeFiles/Practical2.dir/src/bfs.cpp.o: ../src/loadgraph.h
 
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o: ../src/dijkstra.cpp
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o: ../src/dijkstra.h
+CMakeFiles/Practical2.dir/src/dijkstra.cpp.o: ../src/loadgraph.h
+
 CMakeFiles/Practical2.dir/src/loadgraph.cpp.o: ../src/loadgraph.cpp
 CMakeFiles/Practical2.dir/src/loadgraph.cpp.o: ../src/loadgraph.h
 
 CMakeFiles/Practical2.dir/src/main.cpp.o: ../src/bfs.h
+CMakeFiles/Practical2.dir/src/main.cpp.o: ../src/dijkstra.h
 CMakeFiles/Practical2.dir/src/main.cpp.o: ../src/loadgraph.h
 CMakeFiles/Practical2.dir/src/main.cpp.o: ../src/main.cpp
 

@@ -5,7 +5,7 @@
 int main() {
 
     string filename;
-    bool debug = true;
+    bool debug = false;
     AdjacencyList loadedGraph;
     unsigned int bfs_source = 5;
     unsigned int dijkstra_source = 5;

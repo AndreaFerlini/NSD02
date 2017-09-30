@@ -3,5 +3,5 @@ project(Practical2)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES src/main.cpp src/loadgraph.cpp src/loadgraph.h src/bfs.cpp src/bfs.h)
+set(SOURCE_FILES src/main.cpp src/loadgraph.cpp src/loadgraph.h src/bfs.cpp src/bfs.h src/dijkstra.cpp src/dijkstra.h src/dijkstra.cpp src/dijkstra.h)
 add_executable(Practical2 ${SOURCE_FILES})
