@@ -42,7 +42,7 @@ struct GraphDegree{
         }
     }
 
-    /// DISTRUCTOR
+    /// DESTRUCTOR
     ~GraphDegree(){
         if (degree_array != nullptr){
             delete[] degree_array;
@@ -120,7 +120,7 @@ struct AdjacencyList{
 
     }
 
-    /// DISTRUCTOR
+    /// DESTRUCTOR
     ~AdjacencyList(){
         if (neighbours_list != nullptr){
             delete[] neighbours_list;

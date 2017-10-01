@@ -51,12 +51,12 @@ int executeDijkstra(unsigned int source, AdjacencyList &adjGraph, bool debug){
         unsigned min_dist;
         unsigned closest_vertex; // store the id of the vertex with the less
         unsigned int alt_path;   // variable to probe alternative paths for the neighbours of the closest vertex (contains the distance through that path)
-        unsigned int neigh_id;   // containd the id of the current neighbour of the closest vertex
+        unsigned int neigh_id;   // contains the id of the current neighbour of the closest vertex
 
-        // cycle over all the nodes in the graph untill all has been marked
+        // cycle over all the nodes in the graph until all has been marked
         while (nodes_to_visit){
 
-            min_dist = 0b11111111111111111111111111111111; // reset to search anothe minimum
+            min_dist = 0b11111111111111111111111111111111; // reset to search another minimum
             closest_vertex = source;
 
             // find the non marked vertex with the minimum distance (from source)
