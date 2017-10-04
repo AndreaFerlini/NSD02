@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/bfs.cpp" "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles/Practical2.dir/src/bfs.cpp.o"
-  "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/dijkstra.cpp" "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles/Practical2.dir/src/dijkstra.cpp.o"
-  "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/loadgraph.cpp" "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles/Practical2.dir/src/loadgraph.cpp.o"
-  "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/src/main.cpp" "/Users/AndreaFerlini/Documents/Education/Master/EIT-ITA/UPMC/NSD/Practical/Practical2/cmake-build-debug/CMakeFiles/Practical2.dir/src/main.cpp.o"
+  "/home/luca/Data/source/repo/NSD02/src/bfs.cpp" "/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles/Practical2.dir/src/bfs.cpp.o"
+  "/home/luca/Data/source/repo/NSD02/src/dijkstra.cpp" "/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles/Practical2.dir/src/dijkstra.cpp.o"
+  "/home/luca/Data/source/repo/NSD02/src/loadgraph.cpp" "/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles/Practical2.dir/src/loadgraph.cpp.o"
+  "/home/luca/Data/source/repo/NSD02/src/main.cpp" "/home/luca/Data/source/repo/NSD02/cmake-build-debug/CMakeFiles/Practical2.dir/src/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

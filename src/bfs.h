@@ -10,8 +10,9 @@
 
 /// FUNCTIONS
 
+int printConnectedGraph(AdjacencyList &adjGraph, unsigned int *distance_array, bool debug = false);
 
-int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool debug = false);
+int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool *visited, bool debug = false);
 
 unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool debug = false);
 #endif //PRACTICAL2_BFS_H

@@ -6,7 +6,7 @@
 
 
 // BFS from a given source
-int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool debug){
+int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool *visited, bool debug){
 
     list <unsigned int> fifo;
     unsigned int it=0;
@@ -19,18 +19,19 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
     //auto *parent_array = new unsigned int [adjGraph.num_vertices];
     auto *bfs = new unsigned int [adjGraph.num_vertices];
 
-    // Mark all the nodes as not visited
-    bool *visited = new bool [adjGraph.num_vertices]();
+    // Mark all the nodes as not visited (the first element of visited (visited[0]) counts the visited nodes
+    visited = new bool [adjGraph.num_vertices+1]();
 
     if (debug){
-        for (unsigned int i=0; i < adjGraph.num_vertices; i++){
+        for (unsigned int i=1; i < adjGraph.num_vertices+1; i++){
             cout << visited[i] << endl;
             // visited[i] = false;
         }
     }
 
     // Mark the source as visited and push it @ the end of the fifo
-    visited[source-1] = true;
+    visited[source] = true;
+    visited[0]++;
     fifo.push_back(source-1);
 
     if (debug){
@@ -52,12 +53,12 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
 
             target_neighbour = adjGraph.neighbours_list[it];
 
-            if (!visited[target_neighbour-1]) {
+            if (!visited[target_neighbour]) {
                 if (debug)
                     cout << "[BFS Tree creation] - neighbour #" << it << ": " << target_neighbour << endl;
 
                 fifo.push_back(target_neighbour - 1);
-                visited[target_neighbour - 1] = true;
+                visited[target_neighbour] = true;
                 //parent_array[target_neighbour-1] = output_node+1;
                 distance_array[target_neighbour-1] = distance_array[output_node]+1;
             }
@@ -78,7 +79,7 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
     cout << "The size of the connected component is: " << component_size << endl;
 
 
-    delete [] visited;
+    // delete [] visited;
     //delete [] parent_array;
     delete [] bfs;
     return 0;
@@ -98,7 +99,8 @@ unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool 
     srand ((unsigned int)time(nullptr));
     source_new_bfs = rand() % adjGraph.num_vertices + 1;
 
-    executeBFS(source_new_bfs, adjGraph, distance_array, debug);
+    bool* visited;
+    executeBFS(source_new_bfs, adjGraph, distance_array,visited, debug);
 
     if (distance_array == nullptr) {
         cout << "[estimateDiameter] - ERROR in loading distance array" << endl;
@@ -120,7 +122,7 @@ unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool 
         }
 
         cout << "[estimateDiameter] - diameter: " << diameter << endl;
-        executeBFS(source_new_bfs, adjGraph, distance_array, debug);
+        executeBFS(source_new_bfs, adjGraph, distance_array, visited, debug);
         for (unsigned int i=0; i < adjGraph.num_vertices; i ++){
             if (distance_array[i]>=new_diameter){
                 new_diameter = distance_array[i];
