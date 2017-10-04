@@ -11,10 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb93af85-623a-49e8-b4b9-e4d4c435eb81" name="Default" comment="Fixed dijkstra; TODO: test with different known graph files">
+    <list default="true" id="cb93af85-623a-49e8-b4b9-e4d4c435eb81" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bfs.cpp" afterPath="$PROJECT_DIR$/src/bfs.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bfs.h" afterPath="$PROJECT_DIR$/src/bfs.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -286,12 +284,20 @@
       <workItem from="1506776972453" duration="6090000" />
       <workItem from="1506783705320" duration="322000" />
       <workItem from="1506851380855" duration="13672000" />
-      <workItem from="1507128512999" duration="1929000" />
+      <workItem from="1507128512999" duration="1997000" />
     </task>
+    <task id="LOCAL-00001" summary="changed distance calculation in executeBFS">
+      <created>1507130507976</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507130507976</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68220000" />
+    <option name="totallyTimeSpent" value="68288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-28" width="1920" height="1108" extended-state="0" />
@@ -326,7 +332,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed dijkstra; TODO: test with different known graph files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed dijkstra; TODO: test with different known graph files" />
+    <MESSAGE value="changed distance calculation in executeBFS" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed distance calculation in executeBFS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
