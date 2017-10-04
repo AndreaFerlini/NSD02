@@ -8,7 +8,9 @@
 #include "loadgraph.h"
 
 /// FUNCTIONS
-int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool debug = false);
+
+
+int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool debug = false, );
 
 unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool debug = false);
 #endif //PRACTICAL2_BFS_H
