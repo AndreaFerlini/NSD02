@@ -18,8 +18,6 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
     auto *parent_array = new unsigned int [adjGraph.num_vertices];
     auto *bfs = new unsigned int [adjGraph.num_vertices];
 
-    distance_array = new unsigned int [adjGraph.num_vertices]();
-
     // Mark all the nodes as not visited
     bool *visited = new bool [adjGraph.num_vertices]();
 
@@ -61,20 +59,11 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
                 visited[target_neighbour - 1] = true;
                 parent_array[target_neighbour-1] = output_node+1;
                 // TODO: vedere se ti va bene così
-                distance_array[target_neighbour] = distance_array[output_node]+1;
+                distance_array[target_neighbour-1] = distance_array[output_node]+1;
             }
         }
         //cout << endl;
     }
-
-//    for (unsigned int i=0; i < adjGraph.num_vertices; i++){
-//        distance_array[i]=0;
-//        temp_vertex = i;
-//        while (temp_vertex != source-1){
-//            distance_array[i]++;
-//            temp_vertex = parent_array[temp_vertex]-1;
-//        }
-//    }
 
     if (debug){
         for (unsigned int  x = 0;  x < adjGraph.num_vertices; ++ x) {
@@ -89,7 +78,6 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
 
     delete [] visited;
     delete [] parent_array;
-    //delete [] distance_array;
     delete [] bfs;
     return 0;
 }
@@ -123,6 +111,12 @@ unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool 
     }
 
     while (counter < convergence_th){
+
+        // reset distance array
+        for (unsigned int i=0; i < adjGraph.num_vertices; i ++){
+            distance_array[i]=0;
+        }
+
         cout << "[estimateDiameter] - diameter: " << diameter << endl;
         executeBFS(source_new_bfs, adjGraph, distance_array, debug);
         for (unsigned int i=0; i < adjGraph.num_vertices; i ++){
