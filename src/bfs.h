@@ -6,6 +6,7 @@
 #define PRACTICAL2_BFS_H
 
 #include "loadgraph.h"
+#include <vector>
 
 /// FUNCTIONS
 

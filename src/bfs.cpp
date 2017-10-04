@@ -14,8 +14,9 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
     unsigned int target_neighbour=0;
     unsigned int temp_vertex;
     unsigned int bfs_index = 0;
+    unsigned int component_size = 0;
 
-    auto *parent_array = new unsigned int [adjGraph.num_vertices];
+    //auto *parent_array = new unsigned int [adjGraph.num_vertices];
     auto *bfs = new unsigned int [adjGraph.num_vertices];
 
     // Mark all the nodes as not visited
@@ -57,27 +58,28 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
 
                 fifo.push_back(target_neighbour - 1);
                 visited[target_neighbour - 1] = true;
-                parent_array[target_neighbour-1] = output_node+1;
-                // TODO: vedere se ti va bene così
+                //parent_array[target_neighbour-1] = output_node+1;
                 distance_array[target_neighbour-1] = distance_array[output_node]+1;
             }
         }
         //cout << endl;
     }
+    component_size = bfs_index;
 
     if (debug){
         for (unsigned int  x = 0;  x < adjGraph.num_vertices; ++ x) {
-            cout << "Node " << x+1 << " has parent " << parent_array[x] << " and distance " << distance_array[x] << endl;
+            //cout << "Node " << x+1 << " has parent " << parent_array[x] << " and distance " << distance_array[x] << endl;
         }
     }
 
-    for (bfs_index=0; bfs_index<adjGraph.num_vertices; bfs_index++){
+    for (bfs_index=0; bfs_index<component_size; bfs_index++){
         cout << bfs[bfs_index]+1 << " (" << distance_array[bfs[bfs_index]] << ")"<<endl;
     }
+    cout << "The size of the connected component is: " << component_size << endl;
 
 
     delete [] visited;
-    delete [] parent_array;
+    //delete [] parent_array;
     delete [] bfs;
     return 0;
 }
