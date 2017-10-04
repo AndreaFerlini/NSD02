@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb93af85-623a-49e8-b4b9-e4d4c435eb81" name="Default" comment="Now executeBFS return the visited array&#10;Visited array is modify as follow: +1 item. the first element is used as counter f the visited number -&gt; index of the array correspind now to the actual vertex ID">
+    <list default="true" id="cb93af85-623a-49e8-b4b9-e4d4c435eb81" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Practical2.dir/src/bfs.cpp.o" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Practical2.dir/src/main.cpp.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" />
@@ -45,8 +45,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Practical2.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Practical2.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bfs.cpp" afterPath="$PROJECT_DIR$/src/bfs.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bfs.h" afterPath="$PROJECT_DIR$/src/bfs.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,7 +142,7 @@
       <file leaf-file-name="bfs.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bfs.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2232">
+            <state relative-caret-position="1962">
               <caret line="124" column="69" lean-forward="false" selection-start-line="124" selection-start-column="69" selection-end-line="124" selection-end-column="69" />
               <folding />
             </state>
@@ -351,11 +349,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507130507976</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Now executeBFS return the visited array&#10;Visited array is modify as follow: +1 item. the first element is used as counter f the visited number -&gt; index of the array correspind now to the actual vertex ID;&#10;Corrected errors, working.">
+      <created>1507145957716</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1507145957716</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68958000" />
+    <option name="totallyTimeSpent" value="69003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1031" extended-state="6" />
@@ -367,7 +372,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.5064034" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.49573106" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.49359658" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.49359658" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15078124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -404,7 +409,8 @@
     <MESSAGE value="Fixed dijkstra; TODO: test with different known graph files" />
     <MESSAGE value="changed distance calculation in executeBFS" />
     <MESSAGE value="Now executeBFS return the visited array&#10;Visited array is modify as follow: +1 item. the first element is used as counter f the visited number -&gt; index of the array correspind now to the actual vertex ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now executeBFS return the visited array&#10;Visited array is modify as follow: +1 item. the first element is used as counter f the visited number -&gt; index of the array correspind now to the actual vertex ID" />
+    <MESSAGE value="Now executeBFS return the visited array&#10;Visited array is modify as follow: +1 item. the first element is used as counter f the visited number -&gt; index of the array correspind now to the actual vertex ID;&#10;Corrected errors, working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now executeBFS return the visited array&#10;Visited array is modify as follow: +1 item. the first element is used as counter f the visited number -&gt; index of the array correspind now to the actual vertex ID;&#10;Corrected errors, working." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -662,7 +668,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bfs.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2232">
+        <state relative-caret-position="1962">
           <caret line="124" column="69" lean-forward="false" selection-start-line="124" selection-start-column="69" selection-end-line="124" selection-end-column="69" />
           <folding />
         </state>
