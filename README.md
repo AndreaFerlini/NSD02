@@ -17,48 +17,60 @@ Fall Semester 2017/18
 
 The main directory contains the following folders:
 	
-	a. /code   	: Contains all the functions
+	a. /src   	: Contains all the functions
 	b. /graphs 	: Where to put graph files. It contains the script to skip comments and blank lines
-	c. /plot	: Contains the scripts to plot the degree distribution with gnuplot
+	
 
 2. CODE STRUCTURE
 
 	2.1 FILE ARTICULATION
 
-	The code provides two files containing the required functions.
+	The code is structured in 3 files containing the required functions.
 
-		a. graphstats.cpp contains functions to compute the statistics of the graph:
+		a. loadgrph.cpp contains functions to compute the statistics of the graph:
 
 			graphSize 	 -> computes the number of nodes
 			graphDegree  -> counts the degree of each node
-			graphStats 	 -> provide the overall statistics (size, degree, min, max and avg degree, density)
-			cleaningData -> remove self-loops and duplicated edges in the file
-			degreeDistribution -> writes a file containing the points of the degree distributon histogram
+			loadAdjListContiguous -> Loads the graph as adjacency list with contiguous storage
+			
 
-		b. storegraph.cpp contains the functions to store the graph in memory
+		b. bfs.cpp contains the functions to store the graph in memory
 
-			loadAdjList  -> Loads the graph as adjacency list
-			loadAdjListCompact	-> Loads the graph as adjacency list with contiguous storage
-			loadAdjMat 	 -> Load the graph as adjacency matrix
-			loadEdgeList -> load the grapg as list of edges
+			executeBFS 			-> visits the graph using a BFS algorithm and print the visited vertices.
+									It also fills an array with the distance of the vertices from the source.
+			extimateDiameter 	-> Iteratively visit the graph using a BFS starting from the furthest node
+			printConnectedGraph -> Print all the connected elements of the graph using BFS multiple times
+									untill all the vertices are visited.
 
-	In graphstats.h two structures are defined. In particular:
+			extimateAccurateDiameter -> runs "extimateDiameter" whith a source inside every connected component of the graph
 
-		nDegree -> Store the array for the degree of each node
-		gStats  -> Store the graph statistics
+		c. dijkstra.cpp
 
-	Note: storegraph.h includes graphstats.h in order to use some functioncs
+			executeDijkstra -> calculate the shortest path in a weighted graph using Dijkstra algorithm.
 
+
+	In loadgraph.h two structures are defined. In particular:
+
+		GraphDegree 	-> Stores the array for the degree of each node
+		AdjacencyList   -> Stores the graph using the contiguous storage.
+
+	
 
 3. USAGE
 	
 	3.1 GRAPH FILE FORMAT
 
-	Our program works with graphs stored in a file as a list of edges identified by its vertex (node) id separaded by a space
+	- Our program works with graphs stored in a file as a list of edges identified by its vertex (node) id separaded by a space:
 
 		x y
 
 	where x and y are positive integers greater than 1.
+
+	- For weighted graphs we use the following format:
+
+		x y w
+
+	where x y and w are positive integers greater than 1 separated by a space.
 
 	3.2 LAUNCH THE PROGRAM
 
@@ -67,8 +79,6 @@ The main directory contains the following folders:
 	Follow the steps:
 		a. Uncomment the required section:
 		b. Edit the variable "filename" with the path to the graph file;
-		c. Edit the variable "outputFile" with the path to the file where to save the degree distribution; 
-		  	the program will automatically generate also the .eps (vector image) file with the plot.
-		d. Compile everything in the folder:
-			g++ <program_name> main.cpp graphstats.cpp graphstats.h storegaph.cpp storegaph.h
-		e. Run ./program_name
+		c. Compile everything in the folder:
+			g++ <program_name> main.cpp loadgraph.cpp loadgraph.h bfs.cpp bfs.h dijkstra.cpp dijkstra.h dijkstra.cpp dijkstra.h
+		d. Run ./program_name
