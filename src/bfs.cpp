@@ -162,7 +162,7 @@ int printConnectedGraph(AdjacencyList &adjGraph, bool debug){
     unsigned int n_visited=0;
 
     unsigned int source=1;
-    unsigned int component_counter=1;
+    unsigned int component_counter=0;
 
     list <unsigned int> fifo;
     unsigned int it=0;
@@ -181,6 +181,7 @@ int printConnectedGraph(AdjacencyList &adjGraph, bool debug){
 
     do{
         bfs_index=0;
+        component_counter++;
         cout << endl << "Connected Component #" << component_counter << endl;
         cout << "------------------------------------" << endl;
 
@@ -222,7 +223,6 @@ int printConnectedGraph(AdjacencyList &adjGraph, bool debug){
             //cout << endl;
         }
         component_size = bfs_index;
-        component_counter++;
 
         for (bfs_index=0; bfs_index<component_size; bfs_index++){
             cout << bfs[bfs_index]+1 <<endl;
