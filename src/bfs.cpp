@@ -6,7 +6,7 @@
 
 
 // BFS from a given source
-int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool *visited, bool debug){
+int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *distance_array, bool debug){
 
     list <unsigned int> fifo;
     unsigned int it=0;
@@ -20,18 +20,17 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
     auto *bfs = new unsigned int [adjGraph.num_vertices];
 
     // Mark all the nodes as not visited (the first element of visited (visited[0]) counts the visited nodes
-    visited = new bool [adjGraph.num_vertices+1]();
+    auto* visited = new bool [adjGraph.num_vertices]();
 
     if (debug){
-        for (unsigned int i=1; i < adjGraph.num_vertices+1; i++){
+        for (unsigned int i=0; i < adjGraph.num_vertices; i++){
             cout << visited[i] << endl;
             // visited[i] = false;
         }
     }
 
     // Mark the source as visited and push it @ the end of the fifo
-    visited[source] = true;
-    visited[0]++;
+    visited[source-1] = true;
     fifo.push_back(source-1);
 
     if (debug){
@@ -53,12 +52,12 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
 
             target_neighbour = adjGraph.neighbours_list[it];
 
-            if (!visited[target_neighbour]) {
+            if (!visited[target_neighbour-1]) {
                 if (debug)
                     cout << "[BFS Tree creation] - neighbour #" << it << ": " << target_neighbour << endl;
 
                 fifo.push_back(target_neighbour - 1);
-                visited[target_neighbour] = true;
+                visited[target_neighbour-1] = true;
                 //parent_array[target_neighbour-1] = output_node+1;
                 distance_array[target_neighbour-1] = distance_array[output_node]+1;
             }
@@ -79,7 +78,7 @@ int executeBFS(unsigned int source, AdjacencyList &adjGraph, unsigned int *dista
     cout << "The size of the connected component is: " << component_size << endl;
 
 
-    // delete [] visited;
+    delete [] visited;
     //delete [] parent_array;
     delete [] bfs;
     return 0;
@@ -99,8 +98,7 @@ unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool 
     srand ((unsigned int)time(nullptr));
     source_new_bfs = rand() % adjGraph.num_vertices + 1;
 
-    bool* visited;
-    executeBFS(source_new_bfs, adjGraph, distance_array,visited, debug);
+    executeBFS(source_new_bfs, adjGraph, distance_array, debug);
 
     if (distance_array == nullptr) {
         cout << "[estimateDiameter] - ERROR in loading distance array" << endl;
@@ -122,7 +120,7 @@ unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool 
         }
 
         cout << "[estimateDiameter] - diameter: " << diameter << endl;
-        executeBFS(source_new_bfs, adjGraph, distance_array, visited, debug);
+        executeBFS(source_new_bfs, adjGraph, distance_array, debug);
         for (unsigned int i=0; i < adjGraph.num_vertices; i ++){
             if (distance_array[i]>=new_diameter){
                 new_diameter = distance_array[i];
@@ -140,3 +138,88 @@ unsigned int estimateDiameter(AdjacencyList &adjGraph, int convergence_th, bool 
     delete [] distance_array;
     return diameter;
 }
+
+
+
+int printConnectedGraph(AdjacencyList &adjGraph, bool debug){
+    bool* visited;
+    unsigned int n_visited=0;
+    auto *distance_array = new unsigned int [adjGraph.num_vertices]();
+    unsigned int source=1;
+    unsigned int component_counter=1;
+
+    list <unsigned int> fifo;
+    unsigned int it=0;
+    unsigned int output_node=0;
+    unsigned int target_neighbour=0;
+    unsigned int bfs_index = 0;
+    unsigned int component_size = 0;
+
+    //auto *parent_array = new unsigned int [adjGraph.num_vertices];
+    unsigned int *bfs = new unsigned int [adjGraph.num_vertices];
+
+
+    // Mark all the nodes as not visited (the first element of visited (visited[0]) counts the visited nodes
+    visited = new bool [adjGraph.num_vertices]();
+
+    do{
+        bfs_index=0;
+        cout << endl << "Connected Component #" << component_counter << endl;
+        cout << "------------------------------------" << endl;
+
+
+        // Mark the source as visited and push it @ the end of the fifo
+        visited[source-1] = true;
+        n_visited++;
+        fifo.push_back(source-1);
+
+        if (debug){
+            cout << "[BFS Tree] - parsing the fifo ..." << "size of the fifo " << fifo.size() << endl;
+        }
+        cout << "Printing the BFS starting from " << source << endl;
+        while (!fifo.empty()){
+            output_node = fifo.front();
+
+            fifo.pop_front();
+
+            bfs[bfs_index] = output_node;
+            bfs_index++;
+
+            if (debug)
+                cout << "[BFS Tree] - iterating " << output_node+1 << "'s neighbours ..." << endl;
+
+            for (it = adjGraph.getFirstNeighbourId(output_node); it < (adjGraph.getLastNeighbourId(output_node)); it++) {
+
+                target_neighbour = adjGraph.neighbours_list[it];
+
+                if (!visited[target_neighbour-1]) {
+                    if (debug)
+                        cout << "[BFS Tree creation] - neighbour #" << it << ": " << target_neighbour << endl;
+
+                    fifo.push_back(target_neighbour - 1);
+                    visited[target_neighbour-1] = true;
+                    n_visited++;
+                    //parent_array[target_neighbour-1] = output_node+1;
+                    distance_array[target_neighbour-1] = distance_array[output_node]+1;
+                }
+            }
+            //cout << endl;
+        }
+        component_size = bfs_index;
+        component_counter++;
+
+        for (bfs_index=0; bfs_index<component_size; bfs_index++){
+            cout << bfs[bfs_index]+1 <<endl;
+        }
+        cout << "The size of the connected component is: " << component_size << endl;
+
+        // find the next source (first non visited vertex)
+        source=1;
+        while (visited[source-1]) {
+            source++; // find the next one not visited;
+        }
+
+    } while (n_visited<adjGraph.num_vertices);  // cycle until all the nodes will be visited
+
+}
+

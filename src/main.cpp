@@ -14,7 +14,7 @@ int main() {
     bool debug = false;
 
     //filename = "../graphs/sample_weighted.graph";
-    filename = "../graphs/sample.graph";
+    filename = "../graphs/3_conn_comp.graph";
 
     bool is_weighted = false;
 
@@ -37,9 +37,11 @@ int main() {
 //        cout << "[ERROR] - wrong source" << endl;
 //    }
 
-    graph_diameter = estimateDiameter(loadedGraph, 5, debug);
+    //graph_diameter = estimateDiameter(loadedGraph, 5, debug);
 
-    cout << "Estimated graph diameter: " << graph_diameter << endl;
+    //cout << "Estimated graph diameter: " << graph_diameter << endl;
+
+    printConnectedGraph(loadedGraph);
 
 //    delete [] source_distances;
     return 0;
