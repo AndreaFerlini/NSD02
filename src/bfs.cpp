@@ -358,7 +358,7 @@ int estimateAccurateDiameter(AdjacencyList &adjGraph, int convergence_th, bool d
                 cout << bfs[bfs_index]+1 <<endl;
             }
         }
-
+        if (debug)
             cout << "Connected component size: " << component_size << "  diameter: " << new_diameter << endl;
 
         // find the next source (first non visited vertex)
@@ -376,6 +376,8 @@ int estimateAccurateDiameter(AdjacencyList &adjGraph, int convergence_th, bool d
     delete[] distance_array;
     delete[] bfs;
     delete[] visited;
+
+    cout << "   Connected components: " << component_counter << endl;
 
     return diameter;
 

@@ -19,10 +19,13 @@ int main() {
 
 
     //filename = "../graphs/3_conn_comp.graph";
-    //filename = "../graphs/actor_collaboration.graph";
-    //filename = "../graphs/roadNet_PA.graph";
-    //filename = "../graphs/orkut_groupmemberships.graph"; // d=8.
-    filename = "../graphs/wikipedia_link_en.graph";
+    //filename = "../graphs/actor_collaboration.graph";           // 37s - d:13 - cc:1722
+    //filename = "../graphs/roadNet_PA.graph";                    // 9s - d:794 - cc:207
+    //filename = "../graphs/orkut_groupmemberships.graph";        // 247s - d:8 - cc:2
+    //filename = "../graphs/wikipedia_link_en.graph";             // 590s - d:10 - cc:292
+    //filename = "../graphs/com_amazon.graph";                    // 2s - d:47 - cc:2
+    //filename = "../graphs/com_youtube.graph";                   // 4s - d:24 - cc:2
+    filename = "../graphs/twitter_mpi.graph";
 
     bool is_weighted = false;
 
@@ -30,10 +33,10 @@ int main() {
     if (!file.good())
         cout << "No such file... " << endl;
 
-    cout << time(nullptr)-start << "] Cleaning file...";
-    string command = "../graphs/clear_graph_file.sh " + filename;
-    cout << command << endl;
-    system(command.c_str());
+//    cout << time(nullptr)-start << "] Cleaning file...";
+//    string command = "../graphs/clear_graph_file.sh " + filename;
+//    cout << command << endl;
+//    system(command.c_str());
 
     cout << time(nullptr)-start << "] Loading graph..." << endl;
     if (loadAdjListContiguous(filename, loadedGraph, is_weighted,debug))
@@ -58,7 +61,7 @@ int main() {
     // printConnectedGraph(loadedGraph);
 
     cout << time(nullptr)-start << "] Estimating diameter..."<< endl;
-    cout << time(nullptr)-start << "] Diameter: " << estimateAccurateDiameter(loadedGraph,5);
+    cout << time(nullptr)-start << "] Diameter: " << estimateAccurateDiameter(loadedGraph,2);
 
 
 //    delete [] source_distances;
