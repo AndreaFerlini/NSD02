@@ -17,8 +17,8 @@ Fall Semester 2017/18
 
 The main directory contains the following folders:
 	
-	a. /src   	: Contains all the functions
-	b. /graphs 	: Where to put graph files. It contains the script to skip comments and blank lines
+a. /src   	: Contains all the functions
+b. /graphs 	: Where to put graph files. It contains the script to skip comments and blank lines
 	
 
 2. CODE STRUCTURE
